@@ -13,6 +13,7 @@ def home():
         # check if user exits in database
         # if not create user and add to database
         # create row in Message table with user (created/found) add to ta database
+
 	users= User.query.all()
 	exists=False
 	for u in users:
@@ -23,6 +24,7 @@ def home():
 		u=User(author=u.author)
 		db.session.add(u)
 		db.session.commit()
+
 
     # output all messages
     # create a list of dictionaries with the following structure
