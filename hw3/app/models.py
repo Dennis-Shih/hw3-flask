@@ -9,7 +9,7 @@ class User(db.Model):
 	author=db.Column(db.String(70), unique=True, nullable=False)
 
 	message=db.Column(db.String(200), db.ForeignKey('messages.id')
-	message=db.Column(db.String(200), db.ForeignKey('message.id')
+
     def __repr__(self):
         return f'<User {self.author}>'
 
