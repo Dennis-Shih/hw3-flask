@@ -7,7 +7,7 @@ class User(db.Model):
     # message (linkd to Messages table)
 	id=db.Column(db.Integer, primary_key=True)
 	author=db.Column(db.String(70), unique=True, nullable=False)
-	
+	message=db.Column(db.String(200), db.ForeignKey('
     def __repr__(self):
         return f'<User {self.author}>'
 
@@ -16,6 +16,7 @@ class Messages(db.Model):
     # id (int)
     # message (string, not unique, can't be null)
     # user_id link to id (int)
+	Table=
 	id=db.Column(db.Integer, primary_key=True)
 	message=db.Column(db.String(200, unique=False, nullable=False)
 	user_id=db.Column(db.Integer, db.ForeignKey('user.id')

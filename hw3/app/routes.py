@@ -12,12 +12,15 @@ def home():
         # check if user exits in database
         # if not create user and add to database
         # create row in Message table with user (created/found) add to ta database
-	
-    posts = []
+
+    posts = [
+	{'author':'carlos','message':'Yo! Where you at?!'},
+	{'author':'Jerry','message':'Home. You?'}
+	]
     # output all messages
     # create a list of dictionaries with the following structure
     # [{'author':'carlos', 'message':'Yo! Where you at?!'},
     #  {'author':'Jerry', 'message':'Home. You?'}]
-
+	
     return render_template('home.html', posts=posts, form=form)
 
